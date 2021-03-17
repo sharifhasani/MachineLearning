@@ -1,0 +1,467 @@
+[
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "read_csv",
+        "importPath": "pandas",
+        "description": "pandas",
+        "isExtraImport": true,
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "read_csv",
+        "importPath": "pandas",
+        "description": "pandas",
+        "isExtraImport": true,
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "read_csv",
+        "importPath": "pandas",
+        "description": "pandas",
+        "isExtraImport": true,
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "read_csv",
+        "importPath": "pandas",
+        "description": "pandas",
+        "isExtraImport": true,
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "tree",
+        "importPath": "sklearn",
+        "description": "sklearn",
+        "isExtraImport": true,
+        "detail": "sklearn",
+        "documentation": {}
+    },
+    {
+        "label": "linear_model",
+        "importPath": "sklearn",
+        "description": "sklearn",
+        "isExtraImport": true,
+        "detail": "sklearn",
+        "documentation": {}
+    },
+    {
+        "label": "pydotplus",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pydotplus",
+        "description": "pydotplus",
+        "detail": "pydotplus",
+        "documentation": {}
+    },
+    {
+        "label": "DecisionTreeClassifier",
+        "importPath": "sklearn.tree",
+        "description": "sklearn.tree",
+        "isExtraImport": true,
+        "detail": "sklearn.tree",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.image",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.image",
+        "description": "matplotlib.image",
+        "detail": "matplotlib.image",
+        "documentation": {}
+    },
+    {
+        "label": "float64",
+        "importPath": "numpy",
+        "description": "numpy",
+        "isExtraImport": true,
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "Series",
+        "importPath": "pandas.core.series",
+        "description": "pandas.core.series",
+        "isExtraImport": true,
+        "detail": "pandas.core.series",
+        "documentation": {}
+    },
+    {
+        "label": "stats",
+        "importPath": "scipy",
+        "description": "scipy",
+        "isExtraImport": true,
+        "detail": "scipy",
+        "documentation": {}
+    },
+    {
+        "label": "stats",
+        "importPath": "scipy",
+        "description": "scipy",
+        "isExtraImport": true,
+        "detail": "scipy",
+        "documentation": {}
+    },
+    {
+        "label": "stats",
+        "importPath": "scipy",
+        "description": "scipy",
+        "isExtraImport": true,
+        "detail": "scipy",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "DecisionTree.decisionTreeSample1",
+        "description": "DecisionTree.decisionTreeSample1",
+        "peekOfCode": "df = pd.read_csv(\"data/cars.csv\")\n# print(df)\nfeatures = [\"Volume\", \"Weight\"]\nX = df[features]\ny = df[\"CO2\"]\ndtree = tree.DecisionTreeClassifier()\ndtree = dtree.fit(X, y)\nprint(dtree.predict([[890,870]]))\nexit()\ndata = tree.export_graphviz(dtree,out_file= None, feature_names=features)",
+        "detail": "DecisionTree.decisionTreeSample1",
+        "documentation": {}
+    },
+    {
+        "label": "features",
+        "kind": 5,
+        "importPath": "DecisionTree.decisionTreeSample1",
+        "description": "DecisionTree.decisionTreeSample1",
+        "peekOfCode": "features = [\"Volume\", \"Weight\"]\nX = df[features]\ny = df[\"CO2\"]\ndtree = tree.DecisionTreeClassifier()\ndtree = dtree.fit(X, y)\nprint(dtree.predict([[890,870]]))\nexit()\ndata = tree.export_graphviz(dtree,out_file= None, feature_names=features)\ngraph = pydotplus.graph_from_dot_data(data)\ngraph.write_png('mydecisiontree.png')",
+        "detail": "DecisionTree.decisionTreeSample1",
+        "documentation": {}
+    },
+    {
+        "label": "X",
+        "kind": 5,
+        "importPath": "DecisionTree.decisionTreeSample1",
+        "description": "DecisionTree.decisionTreeSample1",
+        "peekOfCode": "X = df[features]\ny = df[\"CO2\"]\ndtree = tree.DecisionTreeClassifier()\ndtree = dtree.fit(X, y)\nprint(dtree.predict([[890,870]]))\nexit()\ndata = tree.export_graphviz(dtree,out_file= None, feature_names=features)\ngraph = pydotplus.graph_from_dot_data(data)\ngraph.write_png('mydecisiontree.png')\nimg=pltimg.imread('mydecisiontree.png')",
+        "detail": "DecisionTree.decisionTreeSample1",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "DecisionTree.decisionTreeSample1",
+        "description": "DecisionTree.decisionTreeSample1",
+        "peekOfCode": "y = df[\"CO2\"]\ndtree = tree.DecisionTreeClassifier()\ndtree = dtree.fit(X, y)\nprint(dtree.predict([[890,870]]))\nexit()\ndata = tree.export_graphviz(dtree,out_file= None, feature_names=features)\ngraph = pydotplus.graph_from_dot_data(data)\ngraph.write_png('mydecisiontree.png')\nimg=pltimg.imread('mydecisiontree.png')\nimgplot = plt.imshow(img)",
+        "detail": "DecisionTree.decisionTreeSample1",
+        "documentation": {}
+    },
+    {
+        "label": "dtree",
+        "kind": 5,
+        "importPath": "DecisionTree.decisionTreeSample1",
+        "description": "DecisionTree.decisionTreeSample1",
+        "peekOfCode": "dtree = tree.DecisionTreeClassifier()\ndtree = dtree.fit(X, y)\nprint(dtree.predict([[890,870]]))\nexit()\ndata = tree.export_graphviz(dtree,out_file= None, feature_names=features)\ngraph = pydotplus.graph_from_dot_data(data)\ngraph.write_png('mydecisiontree.png')\nimg=pltimg.imread('mydecisiontree.png')\nimgplot = plt.imshow(img)\nplt.show()",
+        "detail": "DecisionTree.decisionTreeSample1",
+        "documentation": {}
+    },
+    {
+        "label": "dtree",
+        "kind": 5,
+        "importPath": "DecisionTree.decisionTreeSample1",
+        "description": "DecisionTree.decisionTreeSample1",
+        "peekOfCode": "dtree = dtree.fit(X, y)\nprint(dtree.predict([[890,870]]))\nexit()\ndata = tree.export_graphviz(dtree,out_file= None, feature_names=features)\ngraph = pydotplus.graph_from_dot_data(data)\ngraph.write_png('mydecisiontree.png')\nimg=pltimg.imread('mydecisiontree.png')\nimgplot = plt.imshow(img)\nplt.show()",
+        "detail": "DecisionTree.decisionTreeSample1",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "DecisionTree.decisionTreeSample1",
+        "description": "DecisionTree.decisionTreeSample1",
+        "peekOfCode": "data = tree.export_graphviz(dtree,out_file= None, feature_names=features)\ngraph = pydotplus.graph_from_dot_data(data)\ngraph.write_png('mydecisiontree.png')\nimg=pltimg.imread('mydecisiontree.png')\nimgplot = plt.imshow(img)\nplt.show()",
+        "detail": "DecisionTree.decisionTreeSample1",
+        "documentation": {}
+    },
+    {
+        "label": "graph",
+        "kind": 5,
+        "importPath": "DecisionTree.decisionTreeSample1",
+        "description": "DecisionTree.decisionTreeSample1",
+        "peekOfCode": "graph = pydotplus.graph_from_dot_data(data)\ngraph.write_png('mydecisiontree.png')\nimg=pltimg.imread('mydecisiontree.png')\nimgplot = plt.imshow(img)\nplt.show()",
+        "detail": "DecisionTree.decisionTreeSample1",
+        "documentation": {}
+    },
+    {
+        "label": "imgplot",
+        "kind": 5,
+        "importPath": "DecisionTree.decisionTreeSample1",
+        "description": "DecisionTree.decisionTreeSample1",
+        "peekOfCode": "imgplot = plt.imshow(img)\nplt.show()",
+        "detail": "DecisionTree.decisionTreeSample1",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommendation",
+        "description": "Recommendation.appRecommendation",
+        "peekOfCode": "df = read_csv(\"data/googleplaystore.csv\", float_precision='round_trip')\ndownload = df[\"Installs\"]\ndownload = [i[0:-1] for i in download]\ndownload = [i.replace(',','') for i in download]\nfor i in range(len(download)):\n    try:    \n        download[i] = int(download[i])\n    except ValueError:\n        download[i] = 0\n        continue",
+        "detail": "Recommendation.appRecommendation",
+        "documentation": {}
+    },
+    {
+        "label": "download",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommendation",
+        "description": "Recommendation.appRecommendation",
+        "peekOfCode": "download = df[\"Installs\"]\ndownload = [i[0:-1] for i in download]\ndownload = [i.replace(',','') for i in download]\nfor i in range(len(download)):\n    try:    \n        download[i] = int(download[i])\n    except ValueError:\n        download[i] = 0\n        continue\nrating = df[\"Rating\"]",
+        "detail": "Recommendation.appRecommendation",
+        "documentation": {}
+    },
+    {
+        "label": "download",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommendation",
+        "description": "Recommendation.appRecommendation",
+        "peekOfCode": "download = [i[0:-1] for i in download]\ndownload = [i.replace(',','') for i in download]\nfor i in range(len(download)):\n    try:    \n        download[i] = int(download[i])\n    except ValueError:\n        download[i] = 0\n        continue\nrating = df[\"Rating\"]\nfor i in range(len(rating)):",
+        "detail": "Recommendation.appRecommendation",
+        "documentation": {}
+    },
+    {
+        "label": "download",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommendation",
+        "description": "Recommendation.appRecommendation",
+        "peekOfCode": "download = [i.replace(',','') for i in download]\nfor i in range(len(download)):\n    try:    \n        download[i] = int(download[i])\n    except ValueError:\n        download[i] = 0\n        continue\nrating = df[\"Rating\"]\nfor i in range(len(rating)):\n    try:",
+        "detail": "Recommendation.appRecommendation",
+        "documentation": {}
+    },
+    {
+        "label": "rating",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommendation",
+        "description": "Recommendation.appRecommendation",
+        "peekOfCode": "rating = df[\"Rating\"]\nfor i in range(len(rating)):\n    try:\n        rating[i] = int(rating[i])\n    except ValueError:\n        rating[i] = 0\n        continue\nprint(GetRelation(download, rating))",
+        "detail": "Recommendation.appRecommendation",
+        "documentation": {}
+    },
+    {
+        "label": "findDiffrentValue",
+        "kind": 2,
+        "importPath": "Recommendation.recommendationSystemMethods",
+        "description": "Recommendation.recommendationSystemMethods",
+        "peekOfCode": "def findDiffrentValue(dataframe, key:str):\n    items = set()\n    for value in dataframe[key]:\n        items.add(value)\n    return items\ndef countDiffrentValue(dataframe, key:str):\n    items = set()\n    for value in dataframe[key]:\n        items.add(value)\n    return len(items)",
+        "detail": "Recommendation.recommendationSystemMethods",
+        "documentation": {}
+    },
+    {
+        "label": "countDiffrentValue",
+        "kind": 2,
+        "importPath": "Recommendation.recommendationSystemMethods",
+        "description": "Recommendation.recommendationSystemMethods",
+        "peekOfCode": "def countDiffrentValue(dataframe, key:str):\n    items = set()\n    for value in dataframe[key]:\n        items.add(value)\n    return len(items)\ndef getAllCompany(dataframe):\n    companies = []\n    for row in range(len(dataframe)):\n        company = {\n            \"name\":dataframe[\"Company (Maker-if known)\"],",
+        "detail": "Recommendation.recommendationSystemMethods",
+        "documentation": {}
+    },
+    {
+        "label": "getAllCompany",
+        "kind": 2,
+        "importPath": "Recommendation.recommendationSystemMethods",
+        "description": "Recommendation.recommendationSystemMethods",
+        "peekOfCode": "def getAllCompany(dataframe):\n    companies = []\n    for row in range(len(dataframe)):\n        company = {\n            \"name\":dataframe[\"Company (Maker-if known)\"],\n            \"country\": dataframe[\"Company Location\"],\n            \"Rating\": dataframe[\"Rating\"]\n        }\n        if company not in companies:\n            companies.append(company)",
+        "detail": "Recommendation.recommendationSystemMethods",
+        "documentation": {}
+    },
+    {
+        "label": "GetRelation",
+        "kind": 2,
+        "importPath": "Recommendation.recommendationSystemMethods",
+        "description": "Recommendation.recommendationSystemMethods",
+        "peekOfCode": "def GetRelation(x, y):\n    slope, intercept , r , p , std_err = stats.linregress(x,y)\n    return r\ndef showLinearRegression(x, y):\n    slope, intercept , r , p , std_err = stats.linregress(x,y)\n    def myfunc(x):\n        return slope * x + intercept\n    mymodel = list(map(myfunc, x))\n    plt.scatter(x, y)\n    plt.plot(x, mymodel)",
+        "detail": "Recommendation.recommendationSystemMethods",
+        "documentation": {}
+    },
+    {
+        "label": "showLinearRegression",
+        "kind": 2,
+        "importPath": "Recommendation.recommendationSystemMethods",
+        "description": "Recommendation.recommendationSystemMethods",
+        "peekOfCode": "def showLinearRegression(x, y):\n    slope, intercept , r , p , std_err = stats.linregress(x,y)\n    def myfunc(x):\n        return slope * x + intercept\n    mymodel = list(map(myfunc, x))\n    plt.scatter(x, y)\n    plt.plot(x, mymodel)\n    plt.show()",
+        "detail": "Recommendation.recommendationSystemMethods",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "regression.linearRegression",
+        "description": "regression.linearRegression",
+        "peekOfCode": "df = read_csv(\"data/cars.csv\")\n# print(df)\nx = df[\"Weight\"]\ny = df[\"Volume\"]\nslope, intercept , r , p , std_err = stats.linregress(x,y)\nprint(r)",
+        "detail": "regression.linearRegression",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "regression.linearRegression",
+        "description": "regression.linearRegression",
+        "peekOfCode": "x = df[\"Weight\"]\ny = df[\"Volume\"]\nslope, intercept , r , p , std_err = stats.linregress(x,y)\nprint(r)",
+        "detail": "regression.linearRegression",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "regression.linearRegression",
+        "description": "regression.linearRegression",
+        "peekOfCode": "y = df[\"Volume\"]\nslope, intercept , r , p , std_err = stats.linregress(x,y)\nprint(r)",
+        "detail": "regression.linearRegression",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "regression.MultipleRegression",
+        "description": "regression.MultipleRegression",
+        "peekOfCode": "df = read_csv(\"data/cars.csv\")\n# print(df)\nX= df[[\"Weight\",\"Volume\"]]\nY = df[\"CO2\"]\n# print(X)\n# print(Y)\nregr = linear_model.LinearRegression()\nregr.fit(X,Y)\nprint(regr.coef_)\nres = regr.predict([[\"120\",\"500\"]])",
+        "detail": "regression.MultipleRegression",
+        "documentation": {}
+    },
+    {
+        "label": "Y",
+        "kind": 5,
+        "importPath": "regression.MultipleRegression",
+        "description": "regression.MultipleRegression",
+        "peekOfCode": "Y = df[\"CO2\"]\n# print(X)\n# print(Y)\nregr = linear_model.LinearRegression()\nregr.fit(X,Y)\nprint(regr.coef_)\nres = regr.predict([[\"120\",\"500\"]])\n# print(res)\n# print(type(res))",
+        "detail": "regression.MultipleRegression",
+        "documentation": {}
+    },
+    {
+        "label": "regr",
+        "kind": 5,
+        "importPath": "regression.MultipleRegression",
+        "description": "regression.MultipleRegression",
+        "peekOfCode": "regr = linear_model.LinearRegression()\nregr.fit(X,Y)\nprint(regr.coef_)\nres = regr.predict([[\"120\",\"500\"]])\n# print(res)\n# print(type(res))",
+        "detail": "regression.MultipleRegression",
+        "documentation": {}
+    },
+    {
+        "label": "res",
+        "kind": 5,
+        "importPath": "regression.MultipleRegression",
+        "description": "regression.MultipleRegression",
+        "peekOfCode": "res = regr.predict([[\"120\",\"500\"]])\n# print(res)\n# print(type(res))",
+        "detail": "regression.MultipleRegression",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    }
+]

@@ -1,12 +1,12 @@
-# from Recommendation.recommendationSystemMethods import showLinearRegression
-# from numpy import nan
-from numpy import float64
 from pandas.core.series import Series
-from .recommendationSystemMethods import GetRelation
+# from .recommendationSystemMethods import GetRelation
+from scipy import stats
 from pandas import read_csv
 import pandas as pd
-# from Recommendation.recommendationSystemMethods import GetRelation
-# from Recommendation.recommendationSystemMethods import findDiffrentValue
+
+def GetRelation(x, y):
+    slope, intercept , r , p , std_err = stats.linregress(x,y)
+    return r
 
 df = read_csv("data/googleplaystore.csv", float_precision='round_trip')
 
@@ -29,3 +29,5 @@ for i in range(len(rating)):
         continue
 
 print(GetRelation(download, rating))
+
+

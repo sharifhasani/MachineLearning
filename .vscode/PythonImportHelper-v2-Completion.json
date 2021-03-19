@@ -1,5 +1,53 @@
 [
     {
+        "label": "where",
+        "importPath": "numpy",
+        "description": "numpy",
+        "isExtraImport": true,
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "NaN",
+        "importPath": "numpy",
+        "description": "numpy",
+        "isExtraImport": true,
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "nan",
+        "importPath": "numpy",
+        "description": "numpy",
+        "isExtraImport": true,
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "make_blobs",
+        "importPath": "sklearn.datasets",
+        "description": "sklearn.datasets",
+        "isExtraImport": true,
+        "detail": "sklearn.datasets",
+        "documentation": {}
+    },
+    {
+        "label": "pyplot",
+        "importPath": "matplotlib",
+        "description": "matplotlib",
+        "isExtraImport": true,
+        "detail": "matplotlib",
+        "documentation": {}
+    },
+    {
         "label": "pandas",
         "kind": 6,
         "isExtraImport": true,
@@ -89,22 +137,6 @@
         "importPath": "matplotlib.image",
         "description": "matplotlib.image",
         "detail": "matplotlib.image",
-        "documentation": {}
-    },
-    {
-        "label": "NaN",
-        "importPath": "numpy",
-        "description": "numpy",
-        "isExtraImport": true,
-        "detail": "numpy",
-        "documentation": {}
-    },
-    {
-        "label": "nan",
-        "importPath": "numpy",
-        "description": "numpy",
-        "isExtraImport": true,
-        "detail": "numpy",
         "documentation": {}
     },
     {
@@ -234,6 +266,24 @@
         "importPath": "subprocess",
         "description": "subprocess",
         "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "counter",
+        "kind": 5,
+        "importPath": "classification.binaryClassification",
+        "description": "classification.binaryClassification",
+        "peekOfCode": "counter = Counter(y)\nprint(counter)\n# summarize first few examples\nfor i in range(10):\n\tprint(X[i], y[i])\n# plot the dataset and color the by class label\nfor label, _ in counter.items():\n\trow_ix = where(y == label)[0]\n\tpyplot.scatter(X[row_ix, 0], X[row_ix, 1], label=str(label))\npyplot.legend()",
+        "detail": "classification.binaryClassification",
+        "documentation": {}
+    },
+    {
+        "label": "\trow_ix",
+        "kind": 5,
+        "importPath": "classification.binaryClassification",
+        "description": "classification.binaryClassification",
+        "peekOfCode": "\trow_ix = where(y == label)[0]\n\tpyplot.scatter(X[row_ix, 0], X[row_ix, 1], label=str(label))\npyplot.legend()\npyplot.show()",
+        "detail": "classification.binaryClassification",
         "documentation": {}
     },
     {

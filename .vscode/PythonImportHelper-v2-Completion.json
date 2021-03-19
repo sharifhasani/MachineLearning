@@ -92,11 +92,35 @@
         "documentation": {}
     },
     {
+        "label": "NaN",
+        "importPath": "numpy",
+        "description": "numpy",
+        "isExtraImport": true,
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "nan",
+        "importPath": "numpy",
+        "description": "numpy",
+        "isExtraImport": true,
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
         "label": "Series",
         "importPath": "pandas.core.series",
         "description": "pandas.core.series",
         "isExtraImport": true,
         "detail": "pandas.core.series",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "recommendationSystemMethods",
+        "description": "recommendationSystemMethods",
+        "isExtraImport": true,
+        "detail": "recommendationSystemMethods",
         "documentation": {}
     },
     {
@@ -294,15 +318,6 @@
         "documentation": {}
     },
     {
-        "label": "GetRelation",
-        "kind": 2,
-        "importPath": "Recommendation.appRecommendation",
-        "description": "Recommendation.appRecommendation",
-        "peekOfCode": "def GetRelation(x, y):\n    slope, intercept , r , p , std_err = stats.linregress(x,y)\n    return r\ndf = read_csv(\"data/googleplaystore.csv\", float_precision='round_trip')\ndownload = df[\"Installs\"]\ndownload = [i[0:-1] for i in download]\ndownload = [i.replace(',','') for i in download]\nfor i in range(len(download)):\n    try:    \n        download[i] = int(download[i])",
-        "detail": "Recommendation.appRecommendation",
-        "documentation": {}
-    },
-    {
         "label": "df",
         "kind": 5,
         "importPath": "Recommendation.appRecommendation",
@@ -343,7 +358,34 @@
         "kind": 5,
         "importPath": "Recommendation.appRecommendation",
         "description": "Recommendation.appRecommendation",
-        "peekOfCode": "rating = df[\"Rating\"]\nfor i in range(len(rating)):\n    try:\n        rating[i] = int(rating[i])\n    except ValueError:\n        rating[i] = 0\n        continue\nprint(GetRelation(download, rating))",
+        "peekOfCode": "rating = df[\"Rating\"]\nfor i in range(len(rating)):\n    try:\n        rating[i] = int(rating[i])\n    except ValueError:\n        rating[i] = 0\n        continue\nappType = df[\"Type\"]\n# print(type(appType))\n# x = findDiffrentValue(df,\"Type\")",
+        "detail": "Recommendation.appRecommendation",
+        "documentation": {}
+    },
+    {
+        "label": "appType",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommendation",
+        "description": "Recommendation.appRecommendation",
+        "peekOfCode": "appType = df[\"Type\"]\n# print(type(appType))\n# x = findDiffrentValue(df,\"Type\")\n# for i in x:\n#     print(type(i))\nfor i in range(len(appType)):\n    if type(appType[i]) is float:\n        appType[i] = 0\n    elif appType[i] == '0' or 'Free':\n         appType[i] = 0",
+        "detail": "Recommendation.appRecommendation",
+        "documentation": {}
+    },
+    {
+        "label": "price",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommendation",
+        "description": "Recommendation.appRecommendation",
+        "peekOfCode": "price = df[\"Price\"]\nx = findDiffrentValue(df,\"Price\")\nprint(x)\nprint(GetRelation(download, rating))",
+        "detail": "Recommendation.appRecommendation",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommendation",
+        "description": "Recommendation.appRecommendation",
+        "peekOfCode": "x = findDiffrentValue(df,\"Price\")\nprint(x)\nprint(GetRelation(download, rating))",
         "detail": "Recommendation.appRecommendation",
         "documentation": {}
     },

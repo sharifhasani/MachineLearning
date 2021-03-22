@@ -1,15 +1,10 @@
-# example of binary classification task
+# example of multi-class classification task
 from numpy import where
 from collections import Counter
 from sklearn.datasets import make_blobs
 from matplotlib import pyplot
 # define dataset
-X, y = make_blobs(n_samples=1000, centers=2, random_state=1)
-# for i in X:
-#     if i in c:
-#         print(i)
-# print(c)
-# exit()
+X, y = make_blobs(n_samples=1000, centers=3, random_state=1)
 # summarize dataset shape
 print(X.shape, y.shape)
 # summarize observations by class label

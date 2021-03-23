@@ -6,9 +6,13 @@ from scipy import stats
 from pandas import read_csv
 import pandas as pd
 
-def ReadFileData():
+def ReadFileData(OrderBy:list):
     df = read_csv("data/googleplaystore.csv", float_precision='round_trip')
-    return df
+    df["Rating"] = GetRatingSeries(df)
+    df["Installs"] = GetInstallsSeries(df)
+    df["Price"] = GetPriceSeries(df)
+    df["Type"] = GetAppTypeSeries(df)
+    return df.sort_values(by=OrderBy)
 
 def GetInstallsSeries(df:DataFrame):
     download = df["Installs"]

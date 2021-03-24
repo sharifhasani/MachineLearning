@@ -6,12 +6,24 @@ from scipy import stats
 from pandas import read_csv
 import pandas as pd
 
-def ReadFileData(OrderBy:list):
-    df = read_csv("data/googleplaystore.csv", float_precision='round_trip')
-    df["Rating"] = GetRatingSeries(df)
-    df["Installs"] = GetInstallsSeries(df)
-    df["Price"] = GetPriceSeries(df)
-    df["Type"] = GetAppTypeSeries(df)
+
+def ReadPureData():
+    df = read_csv("data/puredata.csv")
+    return df
+
+def WriteDataFrameToCSV(df:DataFrame, filename:str):
+    df.to_csv("data/"+filename, header=True)
+    pass
+
+def ReadFileData(OrderBy:list, *labels):
+    df = read_csv("data/googleplaystore.csv", float_precision='round_trip',usecols=labels)
+    try:
+        df["Rating"] = GetRatingSeries(df)
+        df["Installs"] = GetInstallsSeries(df)
+        df["Price"] = GetPriceSeries(df)
+        df["Type"] = GetAppTypeSeries(df)
+    except:
+        pass
     return df.sort_values(by=OrderBy)
 
 def GetInstallsSeries(df:DataFrame):

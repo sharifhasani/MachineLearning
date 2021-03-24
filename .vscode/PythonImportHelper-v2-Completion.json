@@ -1,5 +1,22 @@
 [
     {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "where",
+        "importPath": "numpy",
+        "description": "numpy",
+        "isExtraImport": true,
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
         "label": "where",
         "importPath": "numpy",
         "description": "numpy",
@@ -32,11 +49,35 @@
         "documentation": {}
     },
     {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
         "label": "make_blobs",
         "importPath": "sklearn.datasets",
         "description": "sklearn.datasets",
         "isExtraImport": true,
         "detail": "sklearn.datasets",
+        "documentation": {}
+    },
+    {
+        "label": "make_blobs",
+        "importPath": "sklearn.datasets",
+        "description": "sklearn.datasets",
+        "isExtraImport": true,
+        "detail": "sklearn.datasets",
+        "documentation": {}
+    },
+    {
+        "label": "pyplot",
+        "importPath": "matplotlib",
+        "description": "matplotlib",
+        "isExtraImport": true,
+        "detail": "matplotlib",
         "documentation": {}
     },
     {
@@ -140,6 +181,14 @@
         "documentation": {}
     },
     {
+        "label": "DataFrame",
+        "importPath": "pandas.core.frame",
+        "description": "pandas.core.frame",
+        "isExtraImport": true,
+        "detail": "pandas.core.frame",
+        "documentation": {}
+    },
+    {
         "label": "Series",
         "importPath": "pandas.core.series",
         "description": "pandas.core.series",
@@ -185,6 +234,38 @@
         "description": "scipy",
         "isExtraImport": true,
         "detail": "scipy",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "appRecommendationReadData",
+        "description": "appRecommendationReadData",
+        "isExtraImport": true,
+        "detail": "appRecommendationReadData",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "r2_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "LinearRegression",
+        "importPath": "sklearn.linear_model",
+        "description": "sklearn.linear_model",
+        "isExtraImport": true,
+        "detail": "sklearn.linear_model",
         "documentation": {}
     },
     {
@@ -287,6 +368,24 @@
         "documentation": {}
     },
     {
+        "label": "counter",
+        "kind": 5,
+        "importPath": "classification.multiclassClassification",
+        "description": "classification.multiclassClassification",
+        "peekOfCode": "counter = Counter(y)\nprint(counter)\n# summarize first few examples\nfor i in range(10):\n\tprint(X[i], y[i])\n# plot the dataset and color the by class label\nfor label, _ in counter.items():\n\trow_ix = where(y == label)[0]\n\tpyplot.scatter(X[row_ix, 0], X[row_ix, 1], label=str(label))\npyplot.legend()",
+        "detail": "classification.multiclassClassification",
+        "documentation": {}
+    },
+    {
+        "label": "\trow_ix",
+        "kind": 5,
+        "importPath": "classification.multiclassClassification",
+        "description": "classification.multiclassClassification",
+        "peekOfCode": "\trow_ix = where(y == label)[0]\n\tpyplot.scatter(X[row_ix, 0], X[row_ix, 1], label=str(label))\npyplot.legend()\npyplot.show()",
+        "detail": "classification.multiclassClassification",
+        "documentation": {}
+    },
+    {
         "label": "df",
         "kind": 5,
         "importPath": "DecisionTree.decisionTreeSample1",
@@ -368,75 +467,84 @@
         "documentation": {}
     },
     {
+        "label": "ReadPureData",
+        "kind": 2,
+        "importPath": "Recommendation.appRecommendationReadData",
+        "description": "Recommendation.appRecommendationReadData",
+        "peekOfCode": "def ReadPureData():\n    df = read_csv(\"data/puredata.csv\")\n    return df\ndef WriteDataFrameToCSV(df:DataFrame, filename:str):\n    df.to_csv(\"data/\"+filename, header=True)\n    pass\ndef ReadFileData(OrderBy:list, *labels):\n    df = read_csv(\"data/googleplaystore.csv\", float_precision='round_trip',usecols=labels)\n    try:\n        df[\"Rating\"] = GetRatingSeries(df)",
+        "detail": "Recommendation.appRecommendationReadData",
+        "documentation": {}
+    },
+    {
+        "label": "WriteDataFrameToCSV",
+        "kind": 2,
+        "importPath": "Recommendation.appRecommendationReadData",
+        "description": "Recommendation.appRecommendationReadData",
+        "peekOfCode": "def WriteDataFrameToCSV(df:DataFrame, filename:str):\n    df.to_csv(\"data/\"+filename, header=True)\n    pass\ndef ReadFileData(OrderBy:list, *labels):\n    df = read_csv(\"data/googleplaystore.csv\", float_precision='round_trip',usecols=labels)\n    try:\n        df[\"Rating\"] = GetRatingSeries(df)\n        df[\"Installs\"] = GetInstallsSeries(df)\n        df[\"Price\"] = GetPriceSeries(df)\n        df[\"Type\"] = GetAppTypeSeries(df)",
+        "detail": "Recommendation.appRecommendationReadData",
+        "documentation": {}
+    },
+    {
+        "label": "ReadFileData",
+        "kind": 2,
+        "importPath": "Recommendation.appRecommendationReadData",
+        "description": "Recommendation.appRecommendationReadData",
+        "peekOfCode": "def ReadFileData(OrderBy:list, *labels):\n    df = read_csv(\"data/googleplaystore.csv\", float_precision='round_trip',usecols=labels)\n    try:\n        df[\"Rating\"] = GetRatingSeries(df)\n        df[\"Installs\"] = GetInstallsSeries(df)\n        df[\"Price\"] = GetPriceSeries(df)\n        df[\"Type\"] = GetAppTypeSeries(df)\n    except:\n        pass\n    return df.sort_values(by=OrderBy)",
+        "detail": "Recommendation.appRecommendationReadData",
+        "documentation": {}
+    },
+    {
+        "label": "GetInstallsSeries",
+        "kind": 2,
+        "importPath": "Recommendation.appRecommendationReadData",
+        "description": "Recommendation.appRecommendationReadData",
+        "peekOfCode": "def GetInstallsSeries(df:DataFrame):\n    download = df[\"Installs\"]\n    download = [i[0:-1] for i in download]\n    download = [i.replace(',','') for i in download]\n    for i in range(len(download)):\n        try:    \n            download[i] = int(download[i])\n        except ValueError:\n            download[i] = 0\n            continue",
+        "detail": "Recommendation.appRecommendationReadData",
+        "documentation": {}
+    },
+    {
+        "label": "GetRatingSeries",
+        "kind": 2,
+        "importPath": "Recommendation.appRecommendationReadData",
+        "description": "Recommendation.appRecommendationReadData",
+        "peekOfCode": "def GetRatingSeries(df:DataFrame):\n    rating = df[\"Rating\"]\n    for i in range(len(rating)):\n        try:\n            rating[i] = int(rating[i])\n        except ValueError:\n            rating[i] = 0\n            continue\n    return rating\ndef GetAppTypeSeries(df:DataFrame):",
+        "detail": "Recommendation.appRecommendationReadData",
+        "documentation": {}
+    },
+    {
+        "label": "GetAppTypeSeries",
+        "kind": 2,
+        "importPath": "Recommendation.appRecommendationReadData",
+        "description": "Recommendation.appRecommendationReadData",
+        "peekOfCode": "def GetAppTypeSeries(df:DataFrame):\n    appType = df[\"Type\"]\n    for i in range(len(appType)):\n        if type(appType[i]) is float:\n            appType[i] = 0\n        elif appType[i] == '0' or 'Free':\n            appType[i] = 0\n        elif  appType[i] == 'Paid':\n            appType[i] = 1\n    return appType",
+        "detail": "Recommendation.appRecommendationReadData",
+        "documentation": {}
+    },
+    {
+        "label": "GetPriceSeries",
+        "kind": 2,
+        "importPath": "Recommendation.appRecommendationReadData",
+        "description": "Recommendation.appRecommendationReadData",
+        "peekOfCode": "def GetPriceSeries(df:DataFrame):\n    price = df[\"Price\"]\n    for i in range(len(price)):\n        if price[i] == '0' or price[i] == 0 or price[i]== \"Everyone\":\n            price[i] = float('0')\n        else :\n            price[i] = float(price[i][1:-1])\n    return price",
+        "detail": "Recommendation.appRecommendationReadData",
+        "documentation": {}
+    },
+    {
         "label": "df",
         "kind": 5,
-        "importPath": "Recommendation.appRecommendation",
-        "description": "Recommendation.appRecommendation",
-        "peekOfCode": "df = read_csv(\"data/googleplaystore.csv\", float_precision='round_trip')\ndownload = df[\"Installs\"]\ndownload = [i[0:-1] for i in download]\ndownload = [i.replace(',','') for i in download]\nfor i in range(len(download)):\n    try:    \n        download[i] = int(download[i])\n    except ValueError:\n        download[i] = 0\n        continue",
-        "detail": "Recommendation.appRecommendation",
+        "importPath": "Recommendation.appRecommmendation",
+        "description": "Recommendation.appRecommmendation",
+        "peekOfCode": "df = ReadPureData()\ndata= {\n    \"installs\":df[\"Installs\"].values.reshape(-1,1),\n    \"rating\":df[\"Rating\"]\n}\n# dataframe = pd.DataFrame(data)\n# print(NormalizeDatasetMethod2(df[\"Installs\"]))\nmodel = LinearRegression().fit(data[\"installs\"], data[\"rating\"])\nprint(\"coef : \", model.coef_)\nprint(\"intercept : \", model.intercept_)",
+        "detail": "Recommendation.appRecommmendation",
         "documentation": {}
     },
     {
-        "label": "download",
+        "label": "model",
         "kind": 5,
-        "importPath": "Recommendation.appRecommendation",
-        "description": "Recommendation.appRecommendation",
-        "peekOfCode": "download = df[\"Installs\"]\ndownload = [i[0:-1] for i in download]\ndownload = [i.replace(',','') for i in download]\nfor i in range(len(download)):\n    try:    \n        download[i] = int(download[i])\n    except ValueError:\n        download[i] = 0\n        continue\nrating = df[\"Rating\"]",
-        "detail": "Recommendation.appRecommendation",
-        "documentation": {}
-    },
-    {
-        "label": "download",
-        "kind": 5,
-        "importPath": "Recommendation.appRecommendation",
-        "description": "Recommendation.appRecommendation",
-        "peekOfCode": "download = [i[0:-1] for i in download]\ndownload = [i.replace(',','') for i in download]\nfor i in range(len(download)):\n    try:    \n        download[i] = int(download[i])\n    except ValueError:\n        download[i] = 0\n        continue\nrating = df[\"Rating\"]\nfor i in range(len(rating)):",
-        "detail": "Recommendation.appRecommendation",
-        "documentation": {}
-    },
-    {
-        "label": "download",
-        "kind": 5,
-        "importPath": "Recommendation.appRecommendation",
-        "description": "Recommendation.appRecommendation",
-        "peekOfCode": "download = [i.replace(',','') for i in download]\nfor i in range(len(download)):\n    try:    \n        download[i] = int(download[i])\n    except ValueError:\n        download[i] = 0\n        continue\nrating = df[\"Rating\"]\nfor i in range(len(rating)):\n    try:",
-        "detail": "Recommendation.appRecommendation",
-        "documentation": {}
-    },
-    {
-        "label": "rating",
-        "kind": 5,
-        "importPath": "Recommendation.appRecommendation",
-        "description": "Recommendation.appRecommendation",
-        "peekOfCode": "rating = df[\"Rating\"]\nfor i in range(len(rating)):\n    try:\n        rating[i] = int(rating[i])\n    except ValueError:\n        rating[i] = 0\n        continue\nappType = df[\"Type\"]\n# print(type(appType))\n# x = findDiffrentValue(df,\"Type\")",
-        "detail": "Recommendation.appRecommendation",
-        "documentation": {}
-    },
-    {
-        "label": "appType",
-        "kind": 5,
-        "importPath": "Recommendation.appRecommendation",
-        "description": "Recommendation.appRecommendation",
-        "peekOfCode": "appType = df[\"Type\"]\n# print(type(appType))\n# x = findDiffrentValue(df,\"Type\")\n# for i in x:\n#     print(type(i))\nfor i in range(len(appType)):\n    if type(appType[i]) is float:\n        appType[i] = 0\n    elif appType[i] == '0' or 'Free':\n         appType[i] = 0",
-        "detail": "Recommendation.appRecommendation",
-        "documentation": {}
-    },
-    {
-        "label": "price",
-        "kind": 5,
-        "importPath": "Recommendation.appRecommendation",
-        "description": "Recommendation.appRecommendation",
-        "peekOfCode": "price = df[\"Price\"]\nx = findDiffrentValue(df,\"Price\")\nprint(x)\nprint(GetRelation(download, rating))",
-        "detail": "Recommendation.appRecommendation",
-        "documentation": {}
-    },
-    {
-        "label": "x",
-        "kind": 5,
-        "importPath": "Recommendation.appRecommendation",
-        "description": "Recommendation.appRecommendation",
-        "peekOfCode": "x = findDiffrentValue(df,\"Price\")\nprint(x)\nprint(GetRelation(download, rating))",
-        "detail": "Recommendation.appRecommendation",
+        "importPath": "Recommendation.appRecommmendation",
+        "description": "Recommendation.appRecommmendation",
+        "peekOfCode": "model = LinearRegression().fit(data[\"installs\"], data[\"rating\"])\nprint(\"coef : \", model.coef_)\nprint(\"intercept : \", model.intercept_)",
+        "detail": "Recommendation.appRecommmendation",
         "documentation": {}
     },
     {
@@ -491,6 +599,24 @@
         "description": "Recommendation.recommender",
         "peekOfCode": "class recommender:\n    def __init__(self, data, k=1, metric='pearson', n=5):\n        \"\"\" initialize recommender\n        currently, if data is dictionary the recommender is initialized\n        to it.\n        For all other data types of data, no initialization occurs\n        k is the k value for k nearest neighbor\n        metric is which distance formula to use\n        n is the maximum number of recommendations to make\"\"\"\n        self.k = k",
         "detail": "Recommendation.recommender",
+        "documentation": {}
+    },
+    {
+        "label": "NormalizeDatasetMethod1",
+        "kind": 2,
+        "importPath": "Recommendation.utils",
+        "description": "Recommendation.utils",
+        "peekOfCode": "def NormalizeDatasetMethod1(ds:pd.Series):\n    minimum = ds.min()\n    maximum = ds.max()\n    delta =  maximum - minimum\n    result = []\n    for i in range(len(ds)):\n        result.append(float((ds[i] - minimum) / delta))\n    return result\ndef NormalizeDatasetMethod2(ds:pd.Series):\n    median = ds.median()",
+        "detail": "Recommendation.utils",
+        "documentation": {}
+    },
+    {
+        "label": "NormalizeDatasetMethod2",
+        "kind": 2,
+        "importPath": "Recommendation.utils",
+        "description": "Recommendation.utils",
+        "peekOfCode": "def NormalizeDatasetMethod2(ds:pd.Series):\n    median = ds.median()\n    temp = 0\n    for i in ds:\n        temp += abs(i - median)\n    asd = temp / len(ds)\n    result = []\n    for i in ds :\n        result.append((i - median) / asd)\n    return result",
+        "detail": "Recommendation.utils",
         "documentation": {}
     },
     {

@@ -1,4 +1,4 @@
 {
     "activestate.promptRuntimeCreation": false,
-    "python.pythonPath": "venv/bin/python"
+    "python.pythonPath": "venv\\Scripts\\python.exe"
 }

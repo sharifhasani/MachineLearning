@@ -6,35 +6,23 @@ import pandas as pd
 import numpy
 import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score
+from sklearn.linear_model import LinearRegression
 numpy.random.seed(2)
 
+## Read Orginal file and save useful data
+# df = ReadFileData(["Installs", "Rating"], "Installs", "Rating", "Price", "Type")
+# WriteDataFrameToCSV(df, "puredata.csv")
 
-df = ReadFileData(["Installs", "Rating"])
-print(df)
+# read useful data
+df = ReadPureData()
 data= {
-    "installs":df["Installs"],
+    "installs":df["Installs"].values.reshape(-1,1),
     "rating":df["Rating"]
 }
-dataframe = pd.DataFrame(data)
 
-print(NormalizeDatasetMethod2(df["Installs"]))
+# dataframe = pd.DataFrame(data)
+# print(NormalizeDatasetMethod2(df["Installs"]))
 
-showLinearRegression(data["installs"], data["rating"])
-# # print(dataframe)
-
-
-# x = data["installs"]
-# y = data["raiting"]
-
-# train_x = x[:80]
-# train_y = y[:80]
-
-# test_x = x[80:]
-# test_y = y[80:]
-
-
-# plt.scatter(train_x, train_y)
-# plt.show() 
-# # mymodel = numpy.poly1d(numpy.polyfit(train_x, train_y, 4))
-
-# # print(mymodel(5))
+model = LinearRegression().fit(data["installs"], data["rating"])
+print("coef : ", model.coef_)
+print("intercept : ", model.intercept_)

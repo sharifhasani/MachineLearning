@@ -189,6 +189,30 @@
         "documentation": {}
     },
     {
+        "label": "DataFrame",
+        "importPath": "pandas.core.frame",
+        "description": "pandas.core.frame",
+        "isExtraImport": true,
+        "detail": "pandas.core.frame",
+        "documentation": {}
+    },
+    {
+        "label": "DataFrame",
+        "importPath": "pandas.core.frame",
+        "description": "pandas.core.frame",
+        "isExtraImport": true,
+        "detail": "pandas.core.frame",
+        "documentation": {}
+    },
+    {
+        "label": "Series",
+        "importPath": "pandas.core.series",
+        "description": "pandas.core.series",
+        "isExtraImport": true,
+        "detail": "pandas.core.series",
+        "documentation": {}
+    },
+    {
         "label": "Series",
         "importPath": "pandas.core.series",
         "description": "pandas.core.series",
@@ -246,6 +270,14 @@
     },
     {
         "label": "*",
+        "importPath": "MLAlgorithms",
+        "description": "MLAlgorithms",
+        "isExtraImport": true,
+        "detail": "MLAlgorithms",
+        "documentation": {}
+    },
+    {
+        "label": "*",
         "importPath": "utils",
         "description": "utils",
         "isExtraImport": true,
@@ -253,11 +285,19 @@
         "documentation": {}
     },
     {
-        "label": "r2_score",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
+        "label": "classification",
+        "importPath": "classifier",
+        "description": "classifier",
         "isExtraImport": true,
-        "detail": "sklearn.metrics",
+        "detail": "classifier",
+        "documentation": {}
+    },
+    {
+        "label": "series",
+        "importPath": "pandas.core",
+        "description": "pandas.core",
+        "isExtraImport": true,
+        "detail": "pandas.core",
         "documentation": {}
     },
     {
@@ -534,7 +574,25 @@
         "kind": 5,
         "importPath": "Recommendation.appRecommmendation",
         "description": "Recommendation.appRecommmendation",
-        "peekOfCode": "df = ReadPureData()\ndata= {\n    \"installs\":df[\"Installs\"].values.reshape(-1,1),\n    \"rating\":df[\"Rating\"]\n}\n# dataframe = pd.DataFrame(data)\n# print(NormalizeDatasetMethod2(df[\"Installs\"]))\nmodel = LinearRegression().fit(data[\"installs\"], data[\"rating\"])\nprint(\"coef : \", model.coef_)\nprint(\"intercept : \", model.intercept_)",
+        "peekOfCode": "df = ReadPureData()\ndata= {\n    \"installs\":df[\"Installs\"],\n    \"rating\":df[\"Rating\"]\n}\ndataframe = pd.DataFrame(data)\n# print(NormalizeDatasetMethod2(df[\"Installs\"]))\nclassifier = classification()\nclassifier.BinaryClassifier(df)\nprint(Classifier(df))",
+        "detail": "Recommendation.appRecommmendation",
+        "documentation": {}
+    },
+    {
+        "label": "dataframe",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommmendation",
+        "description": "Recommendation.appRecommmendation",
+        "peekOfCode": "dataframe = pd.DataFrame(data)\n# print(NormalizeDatasetMethod2(df[\"Installs\"]))\nclassifier = classification()\nclassifier.BinaryClassifier(df)\nprint(Classifier(df))\nmodel = LinReg(data[\"installs\"], data[\"rating\"])\nprint(\"coef : \", model.coef_)\nprint(\"intercept : \", model.intercept_)\nprint(data[\"rating\"].mean())\nwhile True:",
+        "detail": "Recommendation.appRecommmendation",
+        "documentation": {}
+    },
+    {
+        "label": "classifier",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommmendation",
+        "description": "Recommendation.appRecommmendation",
+        "peekOfCode": "classifier = classification()\nclassifier.BinaryClassifier(df)\nprint(Classifier(df))\nmodel = LinReg(data[\"installs\"], data[\"rating\"])\nprint(\"coef : \", model.coef_)\nprint(\"intercept : \", model.intercept_)\nprint(data[\"rating\"].mean())\nwhile True:\n    inp = input()\n    print(model.predict([[int(inp)]]))",
         "detail": "Recommendation.appRecommmendation",
         "documentation": {}
     },
@@ -543,8 +601,44 @@
         "kind": 5,
         "importPath": "Recommendation.appRecommmendation",
         "description": "Recommendation.appRecommmendation",
-        "peekOfCode": "model = LinearRegression().fit(data[\"installs\"], data[\"rating\"])\nprint(\"coef : \", model.coef_)\nprint(\"intercept : \", model.intercept_)",
+        "peekOfCode": "model = LinReg(data[\"installs\"], data[\"rating\"])\nprint(\"coef : \", model.coef_)\nprint(\"intercept : \", model.intercept_)\nprint(data[\"rating\"].mean())\nwhile True:\n    inp = input()\n    print(model.predict([[int(inp)]]))",
         "detail": "Recommendation.appRecommmendation",
+        "documentation": {}
+    },
+    {
+        "label": "classification",
+        "kind": 6,
+        "importPath": "Recommendation.classifier",
+        "description": "Recommendation.classifier",
+        "peekOfCode": "class classification:\n    def FindDiffrentValue(self, series:series):\n        values = set()\n        for item in series:\n            values.add(item)\n        return len(values)\n    def Classifier(self, df:DataFrame):\n        valuesLen = {}\n        result = []\n        for colname in df:",
+        "detail": "Recommendation.classifier",
+        "documentation": {}
+    },
+    {
+        "label": "FindDiffrentValue",
+        "kind": 2,
+        "importPath": "Recommendation.MLAlgorithms",
+        "description": "Recommendation.MLAlgorithms",
+        "peekOfCode": "def FindDiffrentValue(series:Series):\n    values = set()\n    for item in series:\n        values.add(item)\n    return len(values)\ndef Classifier(df:DataFrame):\n    valuesLen = {}\n    result = []\n    for colname in df:\n       valuesLen[colname] = FindDiffrentValue(df[colname])",
+        "detail": "Recommendation.MLAlgorithms",
+        "documentation": {}
+    },
+    {
+        "label": "Classifier",
+        "kind": 2,
+        "importPath": "Recommendation.MLAlgorithms",
+        "description": "Recommendation.MLAlgorithms",
+        "peekOfCode": "def Classifier(df:DataFrame):\n    valuesLen = {}\n    result = []\n    for colname in df:\n       valuesLen[colname] = FindDiffrentValue(df[colname])\n       if valuesLen[colname] < 5:\n           result.append(colname)\n    return result\ndef LinReg(x, y):\n    if type(x) is Series:",
+        "detail": "Recommendation.MLAlgorithms",
+        "documentation": {}
+    },
+    {
+        "label": "LinReg",
+        "kind": 2,
+        "importPath": "Recommendation.MLAlgorithms",
+        "description": "Recommendation.MLAlgorithms",
+        "peekOfCode": "def LinReg(x, y):\n    if type(x) is Series:\n        x = x.values.reshape(-1, 1)\n    else:\n        x = x.reshape(-1, 1)\n    model = LinearRegression().fit(x, y)\n    return model",
+        "detail": "Recommendation.MLAlgorithms",
         "documentation": {}
     },
     {

@@ -333,6 +333,22 @@
         "documentation": {}
     },
     {
+        "label": "RandomForestClassifier",
+        "importPath": "sklearn.ensemble",
+        "description": "sklearn.ensemble",
+        "isExtraImport": true,
+        "detail": "sklearn.ensemble",
+        "documentation": {}
+    },
+    {
+        "label": "SVC",
+        "importPath": "sklearn.svm",
+        "description": "sklearn.svm",
+        "isExtraImport": true,
+        "detail": "sklearn.svm",
+        "documentation": {}
+    },
+    {
         "label": "series",
         "importPath": "pandas.core",
         "description": "pandas.core",
@@ -614,7 +630,7 @@
         "kind": 5,
         "importPath": "Recommendation.appRecommmendation",
         "description": "Recommendation.appRecommmendation",
-        "peekOfCode": "df = ReadPureData()\ndata= {\n    \"installs\":df[\"Installs\"],\n    \"rating\":df[\"Rating\"]\n}\ninstalls_train, installs_test, rating_train, rating_test = train_test_split(df[\"Installs\"], df[\"Rating\"], test_size=0.2, random_state=0)\nsc = StandardScaler()\ninstalls_train = sc.fit_transform(installs_train.values.reshape(-1,1))\ninstalls_test = sc.transform(installs_test.values.reshape(-1,1))\ndecision_tree_model = DecisionTreeClassifier(criterion='entropy', random_state=0)",
+        "peekOfCode": "df = ReadPureData()\ndata= {\n    \"installs\":df[\"Installs\"],\n    \"rating\":df[\"Rating\"]\n}\ninstalls_train, installs_test, rating_train, rating_test = train_test_split(df[\"Installs\"], df[\"Rating\"], test_size=0.2, random_state=0)\nsc = StandardScaler()\ninstalls_train = sc.fit_transform(installs_train.values.reshape(-1,1))\ninstalls_test = sc.transform(installs_test.values.reshape(-1,1))\n# Decision Tree classifier",
         "detail": "Recommendation.appRecommmendation",
         "documentation": {}
     },
@@ -623,7 +639,7 @@
         "kind": 5,
         "importPath": "Recommendation.appRecommmendation",
         "description": "Recommendation.appRecommmendation",
-        "peekOfCode": "sc = StandardScaler()\ninstalls_train = sc.fit_transform(installs_train.values.reshape(-1,1))\ninstalls_test = sc.transform(installs_test.values.reshape(-1,1))\ndecision_tree_model = DecisionTreeClassifier(criterion='entropy', random_state=0)\ndecision_tree_model.fit(installs_train, rating_train)\nrating_pred_decisionTree = decision_tree_model.predict(installs_test)\nlinear_regression_model = LinReg(data[\"installs\"], data[\"rating\"])\nrating_pred_linearRegression = linear_regression_model.predict(installs_test)\nprint(\"Decision Tree Accuracy : \", accuracy_score(rating_pred_decisionTree, rating_test))\nprint(\"Linear Regression R2_Score : \", r2_score(rating_pred_linearRegression, rating_test))",
+        "peekOfCode": "sc = StandardScaler()\ninstalls_train = sc.fit_transform(installs_train.values.reshape(-1,1))\ninstalls_test = sc.transform(installs_test.values.reshape(-1,1))\n# Decision Tree classifier\ndecision_tree_model = DecisionTreeClassifier(criterion='entropy', random_state=0)\ndecision_tree_model.fit(installs_train, rating_train)\nrating_pred_decisionTree = decision_tree_model.predict(installs_test)\n# Random Forest classifier\nrandom_forest_model = RandomForestClassifier()\nrandom_forest_model.fit(installs_train, rating_train)",
         "detail": "Recommendation.appRecommmendation",
         "documentation": {}
     },
@@ -632,7 +648,7 @@
         "kind": 5,
         "importPath": "Recommendation.appRecommmendation",
         "description": "Recommendation.appRecommmendation",
-        "peekOfCode": "installs_train = sc.fit_transform(installs_train.values.reshape(-1,1))\ninstalls_test = sc.transform(installs_test.values.reshape(-1,1))\ndecision_tree_model = DecisionTreeClassifier(criterion='entropy', random_state=0)\ndecision_tree_model.fit(installs_train, rating_train)\nrating_pred_decisionTree = decision_tree_model.predict(installs_test)\nlinear_regression_model = LinReg(data[\"installs\"], data[\"rating\"])\nrating_pred_linearRegression = linear_regression_model.predict(installs_test)\nprint(\"Decision Tree Accuracy : \", accuracy_score(rating_pred_decisionTree, rating_test))\nprint(\"Linear Regression R2_Score : \", r2_score(rating_pred_linearRegression, rating_test))\ndataframe = pd.DataFrame(data)",
+        "peekOfCode": "installs_train = sc.fit_transform(installs_train.values.reshape(-1,1))\ninstalls_test = sc.transform(installs_test.values.reshape(-1,1))\n# Decision Tree classifier\ndecision_tree_model = DecisionTreeClassifier(criterion='entropy', random_state=0)\ndecision_tree_model.fit(installs_train, rating_train)\nrating_pred_decisionTree = decision_tree_model.predict(installs_test)\n# Random Forest classifier\nrandom_forest_model = RandomForestClassifier()\nrandom_forest_model.fit(installs_train, rating_train)\nrating_pred_randomForest = random_forest_model.predict(installs_test)",
         "detail": "Recommendation.appRecommmendation",
         "documentation": {}
     },
@@ -641,7 +657,7 @@
         "kind": 5,
         "importPath": "Recommendation.appRecommmendation",
         "description": "Recommendation.appRecommmendation",
-        "peekOfCode": "installs_test = sc.transform(installs_test.values.reshape(-1,1))\ndecision_tree_model = DecisionTreeClassifier(criterion='entropy', random_state=0)\ndecision_tree_model.fit(installs_train, rating_train)\nrating_pred_decisionTree = decision_tree_model.predict(installs_test)\nlinear_regression_model = LinReg(data[\"installs\"], data[\"rating\"])\nrating_pred_linearRegression = linear_regression_model.predict(installs_test)\nprint(\"Decision Tree Accuracy : \", accuracy_score(rating_pred_decisionTree, rating_test))\nprint(\"Linear Regression R2_Score : \", r2_score(rating_pred_linearRegression, rating_test))\ndataframe = pd.DataFrame(data)\nprint(\"Linear Regression coef : \", linear_regression_model.coef_)",
+        "peekOfCode": "installs_test = sc.transform(installs_test.values.reshape(-1,1))\n# Decision Tree classifier\ndecision_tree_model = DecisionTreeClassifier(criterion='entropy', random_state=0)\ndecision_tree_model.fit(installs_train, rating_train)\nrating_pred_decisionTree = decision_tree_model.predict(installs_test)\n# Random Forest classifier\nrandom_forest_model = RandomForestClassifier()\nrandom_forest_model.fit(installs_train, rating_train)\nrating_pred_randomForest = random_forest_model.predict(installs_test)\n# Linear Regression",
         "detail": "Recommendation.appRecommmendation",
         "documentation": {}
     },
@@ -650,7 +666,7 @@
         "kind": 5,
         "importPath": "Recommendation.appRecommmendation",
         "description": "Recommendation.appRecommmendation",
-        "peekOfCode": "decision_tree_model = DecisionTreeClassifier(criterion='entropy', random_state=0)\ndecision_tree_model.fit(installs_train, rating_train)\nrating_pred_decisionTree = decision_tree_model.predict(installs_test)\nlinear_regression_model = LinReg(data[\"installs\"], data[\"rating\"])\nrating_pred_linearRegression = linear_regression_model.predict(installs_test)\nprint(\"Decision Tree Accuracy : \", accuracy_score(rating_pred_decisionTree, rating_test))\nprint(\"Linear Regression R2_Score : \", r2_score(rating_pred_linearRegression, rating_test))\ndataframe = pd.DataFrame(data)\nprint(\"Linear Regression coef : \", linear_regression_model.coef_)\nprint(\"Linear Regression intercept : \", linear_regression_model.intercept_)",
+        "peekOfCode": "decision_tree_model = DecisionTreeClassifier(criterion='entropy', random_state=0)\ndecision_tree_model.fit(installs_train, rating_train)\nrating_pred_decisionTree = decision_tree_model.predict(installs_test)\n# Random Forest classifier\nrandom_forest_model = RandomForestClassifier()\nrandom_forest_model.fit(installs_train, rating_train)\nrating_pred_randomForest = random_forest_model.predict(installs_test)\n# Linear Regression\nlinear_regression_model = LinReg(data[\"installs\"], data[\"rating\"])\nrating_pred_linearRegression = linear_regression_model.predict(installs_test)",
         "detail": "Recommendation.appRecommmendation",
         "documentation": {}
     },
@@ -659,7 +675,25 @@
         "kind": 5,
         "importPath": "Recommendation.appRecommmendation",
         "description": "Recommendation.appRecommmendation",
-        "peekOfCode": "rating_pred_decisionTree = decision_tree_model.predict(installs_test)\nlinear_regression_model = LinReg(data[\"installs\"], data[\"rating\"])\nrating_pred_linearRegression = linear_regression_model.predict(installs_test)\nprint(\"Decision Tree Accuracy : \", accuracy_score(rating_pred_decisionTree, rating_test))\nprint(\"Linear Regression R2_Score : \", r2_score(rating_pred_linearRegression, rating_test))\ndataframe = pd.DataFrame(data)\nprint(\"Linear Regression coef : \", linear_regression_model.coef_)\nprint(\"Linear Regression intercept : \", linear_regression_model.intercept_)\nwhile True:\n    print(\"Enter value for predict . . . \")",
+        "peekOfCode": "rating_pred_decisionTree = decision_tree_model.predict(installs_test)\n# Random Forest classifier\nrandom_forest_model = RandomForestClassifier()\nrandom_forest_model.fit(installs_train, rating_train)\nrating_pred_randomForest = random_forest_model.predict(installs_test)\n# Linear Regression\nlinear_regression_model = LinReg(data[\"installs\"], data[\"rating\"])\nrating_pred_linearRegression = linear_regression_model.predict(installs_test)\n# Support Vector Machine Classification\nsvm_model = SVC(kernel=\"linear\", random_state=0)",
+        "detail": "Recommendation.appRecommmendation",
+        "documentation": {}
+    },
+    {
+        "label": "random_forest_model",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommmendation",
+        "description": "Recommendation.appRecommmendation",
+        "peekOfCode": "random_forest_model = RandomForestClassifier()\nrandom_forest_model.fit(installs_train, rating_train)\nrating_pred_randomForest = random_forest_model.predict(installs_test)\n# Linear Regression\nlinear_regression_model = LinReg(data[\"installs\"], data[\"rating\"])\nrating_pred_linearRegression = linear_regression_model.predict(installs_test)\n# Support Vector Machine Classification\nsvm_model = SVC(kernel=\"linear\", random_state=0)\nsvm_model.fit(installs_train, rating_train)\nrating_pred_svm = svm_model.predict(installs_test)",
+        "detail": "Recommendation.appRecommmendation",
+        "documentation": {}
+    },
+    {
+        "label": "rating_pred_randomForest",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommmendation",
+        "description": "Recommendation.appRecommmendation",
+        "peekOfCode": "rating_pred_randomForest = random_forest_model.predict(installs_test)\n# Linear Regression\nlinear_regression_model = LinReg(data[\"installs\"], data[\"rating\"])\nrating_pred_linearRegression = linear_regression_model.predict(installs_test)\n# Support Vector Machine Classification\nsvm_model = SVC(kernel=\"linear\", random_state=0)\nsvm_model.fit(installs_train, rating_train)\nrating_pred_svm = svm_model.predict(installs_test)\n# Show Result for predict\nprint(\"Decision Tree Accuracy : \", accuracy_score(rating_pred_decisionTree, rating_test))",
         "detail": "Recommendation.appRecommmendation",
         "documentation": {}
     },
@@ -668,7 +702,7 @@
         "kind": 5,
         "importPath": "Recommendation.appRecommmendation",
         "description": "Recommendation.appRecommmendation",
-        "peekOfCode": "linear_regression_model = LinReg(data[\"installs\"], data[\"rating\"])\nrating_pred_linearRegression = linear_regression_model.predict(installs_test)\nprint(\"Decision Tree Accuracy : \", accuracy_score(rating_pred_decisionTree, rating_test))\nprint(\"Linear Regression R2_Score : \", r2_score(rating_pred_linearRegression, rating_test))\ndataframe = pd.DataFrame(data)\nprint(\"Linear Regression coef : \", linear_regression_model.coef_)\nprint(\"Linear Regression intercept : \", linear_regression_model.intercept_)\nwhile True:\n    print(\"Enter value for predict . . . \")\n    inp = input()",
+        "peekOfCode": "linear_regression_model = LinReg(data[\"installs\"], data[\"rating\"])\nrating_pred_linearRegression = linear_regression_model.predict(installs_test)\n# Support Vector Machine Classification\nsvm_model = SVC(kernel=\"linear\", random_state=0)\nsvm_model.fit(installs_train, rating_train)\nrating_pred_svm = svm_model.predict(installs_test)\n# Show Result for predict\nprint(\"Decision Tree Accuracy : \", accuracy_score(rating_pred_decisionTree, rating_test))\nprint(\"Random Forest Accuracy : \", accuracy_score(rating_pred_randomForest, rating_test))\nprint(\"Support Vector Machine Accuracy : \", accuracy_score(rating_pred_svm, rating_test))",
         "detail": "Recommendation.appRecommmendation",
         "documentation": {}
     },
@@ -677,7 +711,25 @@
         "kind": 5,
         "importPath": "Recommendation.appRecommmendation",
         "description": "Recommendation.appRecommmendation",
-        "peekOfCode": "rating_pred_linearRegression = linear_regression_model.predict(installs_test)\nprint(\"Decision Tree Accuracy : \", accuracy_score(rating_pred_decisionTree, rating_test))\nprint(\"Linear Regression R2_Score : \", r2_score(rating_pred_linearRegression, rating_test))\ndataframe = pd.DataFrame(data)\nprint(\"Linear Regression coef : \", linear_regression_model.coef_)\nprint(\"Linear Regression intercept : \", linear_regression_model.intercept_)\nwhile True:\n    print(\"Enter value for predict . . . \")\n    inp = input()\n    print(linear_regression_model.predict([[int(inp)]]))",
+        "peekOfCode": "rating_pred_linearRegression = linear_regression_model.predict(installs_test)\n# Support Vector Machine Classification\nsvm_model = SVC(kernel=\"linear\", random_state=0)\nsvm_model.fit(installs_train, rating_train)\nrating_pred_svm = svm_model.predict(installs_test)\n# Show Result for predict\nprint(\"Decision Tree Accuracy : \", accuracy_score(rating_pred_decisionTree, rating_test))\nprint(\"Random Forest Accuracy : \", accuracy_score(rating_pred_randomForest, rating_test))\nprint(\"Support Vector Machine Accuracy : \", accuracy_score(rating_pred_svm, rating_test))\nprint(\"Linear Regression R2_Score : \", r2_score(rating_pred_linearRegression, rating_test))",
+        "detail": "Recommendation.appRecommmendation",
+        "documentation": {}
+    },
+    {
+        "label": "svm_model",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommmendation",
+        "description": "Recommendation.appRecommmendation",
+        "peekOfCode": "svm_model = SVC(kernel=\"linear\", random_state=0)\nsvm_model.fit(installs_train, rating_train)\nrating_pred_svm = svm_model.predict(installs_test)\n# Show Result for predict\nprint(\"Decision Tree Accuracy : \", accuracy_score(rating_pred_decisionTree, rating_test))\nprint(\"Random Forest Accuracy : \", accuracy_score(rating_pred_randomForest, rating_test))\nprint(\"Support Vector Machine Accuracy : \", accuracy_score(rating_pred_svm, rating_test))\nprint(\"Linear Regression R2_Score : \", r2_score(rating_pred_linearRegression, rating_test))\ndataframe = pd.DataFrame(data)\nprint(\"Linear Regression coef : \", linear_regression_model.coef_)",
+        "detail": "Recommendation.appRecommmendation",
+        "documentation": {}
+    },
+    {
+        "label": "rating_pred_svm",
+        "kind": 5,
+        "importPath": "Recommendation.appRecommmendation",
+        "description": "Recommendation.appRecommmendation",
+        "peekOfCode": "rating_pred_svm = svm_model.predict(installs_test)\n# Show Result for predict\nprint(\"Decision Tree Accuracy : \", accuracy_score(rating_pred_decisionTree, rating_test))\nprint(\"Random Forest Accuracy : \", accuracy_score(rating_pred_randomForest, rating_test))\nprint(\"Support Vector Machine Accuracy : \", accuracy_score(rating_pred_svm, rating_test))\nprint(\"Linear Regression R2_Score : \", r2_score(rating_pred_linearRegression, rating_test))\ndataframe = pd.DataFrame(data)\nprint(\"Linear Regression coef : \", linear_regression_model.coef_)\nprint(\"Linear Regression intercept : \", linear_regression_model.intercept_)\nwhile True:",
         "detail": "Recommendation.appRecommmendation",
         "documentation": {}
     },
@@ -686,7 +738,7 @@
         "kind": 5,
         "importPath": "Recommendation.appRecommmendation",
         "description": "Recommendation.appRecommmendation",
-        "peekOfCode": "dataframe = pd.DataFrame(data)\nprint(\"Linear Regression coef : \", linear_regression_model.coef_)\nprint(\"Linear Regression intercept : \", linear_regression_model.intercept_)\nwhile True:\n    print(\"Enter value for predict . . . \")\n    inp = input()\n    print(linear_regression_model.predict([[int(inp)]]))\n    print(decision_tree_model.predict([[int(inp)]]))",
+        "peekOfCode": "dataframe = pd.DataFrame(data)\nprint(\"Linear Regression coef : \", linear_regression_model.coef_)\nprint(\"Linear Regression intercept : \", linear_regression_model.intercept_)\nwhile True:\n    print(\"Enter value for predict . . . \")\n    inp = input()\n    print(\"Predict By LinearRegression : \",linear_regression_model.predict([[int(inp)]]))\n    print(\"Predict By Decision Tree : \",decision_tree_model.predict([[int(inp)]]))\n    print(\"Predict By Support Vector Machine : \",svm_model.predict([[int(inp)]]))\n    print(\"Predict By Random Forest : \",random_forest_model.predict([[int(inp)]]))",
         "detail": "Recommendation.appRecommmendation",
         "documentation": {}
     },
